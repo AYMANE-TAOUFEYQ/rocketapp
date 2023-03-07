@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { Fragment } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+import Featured from './components/featured/featured.component';
+import Apps from './components/apps/apps.component';
+
+import logo from './assets/logo192.png';
+import './App.scss';
+
+
+const App = () => {
+  return(
+    <Fragment>
+      <header className="header">
+        <div>
+          <img
+            src={logo}
+            alt="logo"
+          />
+          <h1>AppRocket</h1>
+          <p>The ultimate app AppRocket Download or get your coins free 2023</p>
+        </div>
       </header>
-    </div>
+      <main>
+        <Featured />
+        <Apps />
+      </main>
+    </Fragment>
   );
 }
 

@@ -1,0 +1,26 @@
+.header{
+    padding: 15px 40px;
+    background-color: #2F65FF;
+    color: #ffffff;
+    div{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        img{
+            width: 10rem;
+            margin-bottom: 1rem;
+        }
+        h1{
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+
+        }
+        p{
+            font-size: 1.6rem;
+            font-weight: 400;
+            
+        }
+    }
+    
+}

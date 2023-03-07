@@ -1,0 +1,57 @@
+//Vars 
+:root {
+    --rad: 2rem;
+    --dur: .3s;
+    --color-dark: #fff;
+    --color-light: #2A3042;
+    --color-brand: #2F65FF;
+    --font-fam: 'Lato', sans-serif;
+    --height: 4rem;
+    --btn-width: 5rem;
+    --bez: cubic-bezier(0, 0, 0.43, 1.49);
+}
+
+// Main styles
+.search-box {
+    position: relative;
+    width: 30rem;
+    border-radius: var(--rad);
+}
+input, button {
+    height: var(--height);
+    font-family: var(--font-fam);
+    border: 0;
+    color: var(--color-dark);
+    font-size: 1.8rem;
+}
+input[type="search"] {
+    font-size: 1.6rem;
+    outline: 0; // <-- should probably remove this for better accessibility, adding for demo aesthetics for now.
+    width: 100%;
+    background: var(--color-light);
+    padding: 0 1.6rem;
+    border-radius: var(--rad);
+    appearance: none; //for iOS input[type="search"] roundedness issue. border-radius alone doesn't work
+    transition: all var(--dur) var(--bez);
+    transition-property: width, border-radius;
+    z-index: 1;
+    position: relative;
+}
+button {
+    display: none; // prevent being able to tab to it
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: var(--btn-width);
+    font-weight: bold;
+    background: var(--color-brand);
+    border-radius: 0 var(--rad) var(--rad) 0;
+    cursor: pointer;
+}
+input:not(:placeholder-shown) {
+    border-radius: var(--rad) 0 0 var(--rad);
+    width: calc(100% - var(--btn-width));
+    + button {
+        display: block;
+    }
+}

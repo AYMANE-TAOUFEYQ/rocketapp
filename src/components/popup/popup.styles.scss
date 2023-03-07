@@ -1,0 +1,237 @@
+@import '../../assets/mixins';
+
+.apps__popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    padding-top: 15%;
+    z-index: 1000;
+    animation-name: popupOpacity;
+    animation-duration: .2s;
+
+
+    &__body{
+        width: 36rem;
+        background-color: #2A3042;
+        border-radius: 15px;
+        margin: auto;
+        margin-top: 0rem;
+        position: relative;
+        animation-name: popup;
+        animation-duration: 1s;
+        @include respond (very-small-phone) {
+            width: 50rem;
+        }
+        @include respond (tablet) {
+            margin-top: 18.6rem;
+            width: 63%;
+        }
+    }
+    &__exit{
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        width: 2.5rem;
+        height: 2.5rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        color: #AAB1CA;
+        background-color: #52596C;
+        border: 2px solid #AAB1CA;
+        border-radius: 100%;
+        font-size: 1.5rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all .2s;
+
+        &:hover{
+            color: #52596C;
+            background-color: #AAB1CA;
+            border: 2px solid #52596C;
+        }
+    }
+    &__details{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &--image{
+            width: 15rem;
+            height: 15rem;
+            border-radius: 10px;
+            margin: 4rem 0px 1rem 0;
+            @include respond (very-small-phone) {
+                width: 12rem;
+                height: 12rem;
+                margin: 4rem 0px 4rem 0;
+            }
+        }
+        &--icons{
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            @include respond (very-small-phone) {
+                margin-bottom: 4rem;
+            }
+            &-2{
+                display: flex;
+                align-items: center;
+                &-img{
+                    width: 1.6rem;
+                    height: 1.6rem;
+                }
+                &-down{
+                    margin-left: 0.4rem;
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                    color: #707070;
+                }
+            }
+            
+            &-right:not(:last-child){
+                margin-right: 3rem;
+            }
+        }
+        &__detail{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 25rem;
+            margin: auto;
+            border-bottom: 1px solid #52596C;
+            &--author{
+                font-size: 1.1rem;
+                font-weight: 400;
+                color: #707070;
+                
+                & span {
+                    color: #2F65FF;
+                }
+            }
+            &--title{
+                font-size: 2rem;
+                font-weight: 800;
+                margin-top: -.1rem;
+                margin-bottom: .6rem;
+            }
+            &--paragraph{
+                color: #707070;
+                font-size: 1.4rem;
+                font-weight: bold;
+                margin-bottom: 2rem;
+                @include respond (very-small-phone) {
+                    margin-bottom: 4rem;
+                }
+            }
+        }
+        &--download {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 25rem;
+            margin: auto;
+            
+
+            &--heading{
+                margin: 2rem 0 1rem 0;
+                font-size: 1.6rem;
+                font-weight: bolder;
+                color: #2F65FF;
+                @include respond (very-small-phone){
+                    margin: 2rem 0 2rem 0;
+                } 
+            }
+            &--paragraph {
+                font-size: 1.3rem;
+                color: #fff;
+                font-weight: 400;
+                text-align: center;
+                word-spacing: 1px;
+                margin-bottom: 1.4rem;
+                line-height: 2rem;
+                @include respond (very-small-phone) {
+                    margin-bottom: 4rem;
+                }
+            }
+            &--link{
+                font-size: 1.4rem;
+                font-weight: bolder;
+                color: #fff;
+                background-color: #2F65FF;
+                border-radius: 10px;
+                height: 4rem;
+                width: 20rem;
+                margin-bottom: 2rem;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                transition: all .2s;
+                &:hover{
+                    background-color: #fff;
+                    color: #2F65FF;
+                }
+                @include respond (big-phone) {
+                    height: 5rem;
+                    width: 25rem;
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+}
+
+
+
+@keyframes popup {
+    0%{
+        transform: scale(0.8);
+    }
+    60%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes popupOpacity {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.secondary {
+    font-size: 1.4rem;
+    font-weight: bolder;
+    color: #fff;
+    border: 2px solid #2F65FF;
+    border-radius: 10px;
+    height: 4rem;
+    width: 20rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .2s;
+    &:hover{
+        border: 2px solid #fff;
+        background-color: #fff;
+        color: #2F65FF;
+    }
+    @include respond (big-phone) {
+        height: 5rem;
+        width: 25rem;
+        font-size: 1.6rem;
+    }
+}

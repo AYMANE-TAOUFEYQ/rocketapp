@@ -1,0 +1,41 @@
+@import './assets/mixins';
+
+html{
+    font-size: 62.5%; //10px
+    @include respond (tablet){
+        font-size: 50%;
+    }
+    @include respond (big-phone){
+        font-size: 40%;
+    }
+    @include respond (medium-phone) {
+        font-size: 30%;
+    }
+    @include respond (small-phone) {
+        font-size: 25%;
+    }
+    @include respond (very-small-phone) {
+        font-size: 18%;
+    }
+}
+body {
+    font-family: 'Open Sans Condensed', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a {
+    text-decoration: none;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
