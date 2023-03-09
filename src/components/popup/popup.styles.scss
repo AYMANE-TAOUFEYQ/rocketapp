@@ -2,12 +2,11 @@
 
 .apps__popup{
     position: fixed;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
     background-color: rgba(0,0,0,0.5);
-    padding-top: 15%;
     z-index: 1000;
     animation-name: popupOpacity;
     animation-duration: .2s;
@@ -17,8 +16,7 @@
         width: 36rem;
         background-color: #2A3042;
         border-radius: 15px;
-        margin: auto;
-        margin-top: 0rem;
+        margin: 150px auto 0 auto;
         position: relative;
         animation-name: popup;
         animation-duration: 1s;
@@ -29,6 +27,7 @@
             margin-top: 18.6rem;
             width: 63%;
         }
+
     }
     &__exit{
         position: absolute;
@@ -189,25 +188,7 @@
 
 
 
-@keyframes popup {
-    0%{
-        transform: scale(0.8);
-    }
-    60%{
-        transform: scale(1.2);
-    }
-    100%{
-        transform: scale(1);
-    }
-}
-@keyframes popupOpacity {
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
+
 
 .secondary {
     font-size: 1.4rem;
@@ -233,5 +214,131 @@
         height: 5rem;
         width: 25rem;
         font-size: 1.6rem;
+    }
+}
+
+
+
+@keyframes popup {
+    0%{
+        transform: scale(0.8);
+    }
+    60%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes popupOpacity {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+.valid{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #2F65FF;
+    z-index: 1000;
+
+    
+    &__body {
+        width: 38rem;
+        height: 30rem;
+        background-color: #2A3042;
+        border-radius: 15px;
+        margin: 150px auto 0 auto;
+        padding: 2rem 4rem;
+
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        animation-name: openValid;
+        animation-duration: .8s;
+
+        &__image {
+            height: 10rem;
+            animation: 5s linear infinite rotation ;
+            margin-bottom: 1rem;
+        }
+        &__title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #707070;
+            letter-spacing: .1rem;
+            margin-bottom: 4rem;
+            text-align: center;
+
+            &__waiting {
+                font-size: 1.4rem;
+                font-weight: 600;
+                color: #707070;
+                letter-spacing: .1rem;
+                margin-top: 1rem;
+                text-align: center;
+            }
+        }
+        &__description {
+            font-weight: bold;
+            color: #fff;
+            letter-spacing: 0.02rem;
+            margin-bottom: 2rem;
+            overflow-wrap: anywhere;
+            text-align: center;
+            animation-name: openValid;
+            animation-duration: .8s;
+            text-transform: lowercase;
+
+        }
+        &__progress {
+            position: relative;
+            background-color: #262B3B;
+            width: 20rem;
+            height: 1rem;
+            border-radius: 60rem;
+
+            &__valid {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 1rem;
+                background-color: #2F64FE;
+                border-radius: 60rem;
+            }
+        }
+    }
+}
+
+@keyframes rotation {
+    100% {
+        transform:rotate(360deg); 
+    }
+}
+
+@keyframes openValid {
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
     }
 }
