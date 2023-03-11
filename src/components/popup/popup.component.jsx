@@ -63,7 +63,7 @@ const Popup =({ popup, Close }) => {
                 locker();
             }, 1000);
         }
-    }, [progress, res]);
+    }, [progress, res]); 
 
 
     return (
@@ -136,9 +136,10 @@ const Popup =({ popup, Close }) => {
                                     alt="settings"
                                     className="valid__body__image"
                                 />
+
                                 {progress<100 ? 
                                     <Fragment>
-                                        <p className="valid__body__title">PROCCESSING...</p>
+                                        <p className="valid__body__title">PROCESSING...</p>
                                         <p className="valid__body__description" style={{ fontSize : progress >= 80 ? '1.8rem' : '2rem', width : progress >= 80 ? '24rem' : '16rem'}}>{des}</p>
                                         <div className="valid__body__progress">
                                             <div className="valid__body__progress__valid" style={{width: `${progress}%`}}></div>

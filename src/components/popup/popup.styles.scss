@@ -257,8 +257,8 @@
 
     
     &__body {
-        width: 38rem;
-        height: 30rem;
+        max-width: 58rem;
+
         background-color: #2A3042;
         border-radius: 15px;
         margin: 150px auto 0 auto;
@@ -276,7 +276,7 @@
         &__image {
             height: 10rem;
             animation: 5s linear infinite rotation ;
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
         }
         &__title {
             font-size: 1.4rem;
@@ -313,6 +313,7 @@
             width: 20rem;
             height: 1rem;
             border-radius: 60rem;
+            margin-bottom: 1rem;
 
             &__valid {
                 position: absolute;
