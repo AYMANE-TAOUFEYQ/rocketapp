@@ -2,31 +2,37 @@
 
 html{
     font-size: 62.5%; //10px
-    @include respond (tablet){
+
+    @include respond (desktop) {
         font-size: 50%;
     }
-    @include respond (big-phone){
+    @include respond (tablet) {
         font-size: 40%;
-    }
-    @include respond (medium-phone) {
+    }    
+    @include respond (tablet-port) {
         font-size: 30%;
     }
-    @include respond (small-phone) {
-        font-size: 25%;
+    @include respond (phone) {
+        font-size: 24%;
     }
-    @include respond (very-small-phone) {
+    @include respond (phone-small) {
         font-size: 18%;
+    }
+    @include respond (phone-small-very) {
+        font-size: 14%;
+    }
+    @include respond (phone-small-very-very) {
+        font-size: 10%;
     }
 }
 body {
-    font-family: 'Open Sans Condensed', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Cairo', sans-serif !important;
+    font-family: 'Poppins', sans-serif;
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: 'Cairo', sans-serif !important;
+    font-family: 'Poppins', sans-serif;
 }
 
 a {

@@ -42,7 +42,7 @@ export default function  Apps () {
 
                 <div className='apps__header'>
                     <h1 className='apps__header__title'>All apps</h1>
-                    <SearchBox placeholder='Search...' onSearchHandler={onSearchChange} />
+                    <SearchBox placeholder='Search for apps...' onSearchHandler={onSearchChange} />
                 </div>
 
                 <div className='apps__main'>

@@ -2,20 +2,22 @@
     padding: 15px 40px;
     background-color: #2F65FF;
     color: #ffffff;
-    div{
+
+    &__container{
         display: flex;
         align-items: center;
         flex-direction: column;
-        img{
-            width: 10rem;
-            margin-bottom: 1rem;
-        }
-        h1{
-            font-size: 2rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
 
+        svg{
+            width: 7.4rem;
+            height: 8.8rem;
         }
+
+        h1{
+            font-size: 4rem;
+            font-weight: 800;
+        }
+
         p{
             font-size: 1.6rem;
             font-weight: 400;
@@ -23,4 +25,7 @@
         }
     }
     
+}
+.logo{
+    fill: #1E41A6 !important;
 }

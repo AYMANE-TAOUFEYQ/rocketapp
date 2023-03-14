@@ -52,7 +52,7 @@ const Popup =({ popup, Close }) => {
     useEffect(() => {
         if (progress === 1) {
             setDes(`Downloading ${res}.gz`);
-        } if (progress === 30) {
+        }  if (progress === 30) {
             setDes(`Unpacking ${res}.gz`);
         } if (progress === 80) {
             setDes("starting injection...");
@@ -80,6 +80,7 @@ const Popup =({ popup, Close }) => {
                         />
 
                         <div className="apps__popup__details--icons">
+
                             <div className="apps__popup__details--icons-1 apps__popup__details--icons-right">
                                 <img
                                     src={apple}
@@ -93,7 +94,7 @@ const Popup =({ popup, Close }) => {
                                 />
                             </div>
 
-                            <div className='featured__item--rating apps__popup__details--icons-right'>
+                            <div className='featured__item--rating apps__popup__details--icons-right apps__popup__details--icons-3'>
                                 <img src={star} alt='rating' className='featured__item--rating--image'/><span>{rating}</span>
                             </div>
 

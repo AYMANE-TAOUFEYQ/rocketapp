@@ -14,7 +14,7 @@
 // Main styles
 .search-box {
     position: relative;
-    width: 30rem;
+    width: 31.3rem;
     border-radius: var(--rad);
 }
 input, button {
@@ -26,8 +26,11 @@ input, button {
 }
 input[type="search"] {
     font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: .01rem;
     outline: 0; // <-- should probably remove this for better accessibility, adding for demo aesthetics for now.
     width: 100%;
+    height: 4.5rem;
     background: var(--color-light);
     padding: 0 1.6rem;
     border-radius: var(--rad);
@@ -43,6 +46,7 @@ button {
     top: 0;
     right: 0;
     width: var(--btn-width);
+    height: 4.5rem;
     font-weight: bold;
     background: var(--color-brand);
     border-radius: 0 var(--rad) var(--rad) 0;

@@ -1,65 +1,66 @@
 @import '../../assets/mixins';
+
 .apps{
     background-color: #222736;
     color: #fff;
+
     &__body{
-        max-width: 70rem;
+        max-width: 90.9rem;
         margin: auto;
     }
+
     &__header{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 2rem 0px;
+        padding: 1.6rem 0px;
+
         &__title{
-            text-transform: uppercase;
-            color: #ffffff;
+            height: 2.7rem;
             padding-left: 10px;
-            border-left: 3px solid #2F65FF;
+            text-transform: uppercase;
+            border-left: .6rem solid #2F65FF;
+
+
+            color: #ffffff;
             letter-spacing: 1px;
             word-spacing: 6px;
+            font-size: 2rem;
+
+            display: flex;
+            align-items: center;
         }
     }
     &__main{
         height: 50vh;
+        background-color: #202534;
+        padding: 1.6rem;
+        border-radius: 4.5rem;
         overflow-y: overlay;
-        @include respond (big-phone) {
-            height: 56vh;
-        }
-        @include respond (medium-phone) {
-            height: 65vh;
-        }
+
         &::-webkit-scrollbar {
             display: none;
         }
+
         &__items{
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-            @include respond (tablet) {
-                flex-direction: column;
-                align-content: center;
-                justify-content: none;
-            }
+
+
         }
         &__item{
             cursor: pointer;
-            padding: 10px 20px;
-            width: 32rem;
-            height: 8rem;
+            padding: 1.5rem 3rem;
+            width: 42.4rem;
+            height: 11.4rem;
             background-color: #2A3042;
-            border-radius: 15px;
+            border-radius: 1.5rem;
             display: flex;
             justify-content: space-between;
             transition: all .2s;
             margin-bottom: 2rem;
-            @include respond (tablet) {
-                width: 66rem;
-                height: 15rem;
-            }
-            @include respond (very-small-phone) {
-                height: 18rem;
-            }
+
             &:hover{
                 transform: scale(1.02);
             }
@@ -68,100 +69,64 @@
             }
 
             &--image{
-                width: 6rem;
-                height: 6rem;
-                border-radius: 10px;
-                @include respond (tablet) {
-                    width: 12rem;
-                    height: 12rem;
-                }
-                @include respond (big-phone) {
-                    width: 12rem;
-                    height: 12rem;
-                }
-                @include respond (medium-phone) {
-                    width: 11rem;
-                    height: 11rem;
-                }
-                @include respond (very-small-phone) {
-                    width: 12rem;
-                    height: 12rem;
-                }
+                width: 8.5rem;
+                height: 8.5rem;
+                border-radius: 1.6rem;
+
             }
+
             &--details{
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
                 &--author{
-                    color: #707070;
-                    font-size: 1.1rem;
-                    font-weight: 400;
+                    color: #8F98B5;
+                    font-size: 1.4rem;
+                    font-weight: 100;
+
                     &--blue{
                         color: #2F65FF;
                     }
-                    @include respond (tablet) {
-                        margin-right: 28rem;
-                        font-size: 1.4rem;
-                    }
-                    @include respond (small-phone) {
-                        margin-right: 25rem;
-                    }
-                    @include respond (very-small-phone) {
-                        margin-right: 10rem;
-                    }
+
+
                 }
+
                 &--info{
                     display: flex;
                     align-items: center;
                     &--title{
-                        font-size: 1.4rem;
-                        font-weight: 800;
+                        font-size: 2rem;
+                        font-weight: 600;
+                        letter-spacing: 0.1rem;
                         color: #fff;
-                        margin-right: 2rem;
+                        margin-right: 1.3rem;
+                        border-right: 1px solid #1E2331;
+                        padding-right: 1.3rem;
                         transition: all .2s;
-                        @include respond (tablet) {
-                            font-size: 2.4rem;
-                            margin-right: 4rem;
-                        }
-                    }
+                        
 
+                    }
                 }  
-                &--paragraph{
-                    color: #707070;
-                    font-size: 1.1rem;
-                    font-weight: 400;
-                    @include respond (tablet) {
-                        font-size: 1.8rem;
-                    }
-                }
 
+                &--paragraph{
+                    color: #8F98B5;
+                    font-size: 1.6rem;
+                    font-weight: 100;
+
+                }
             }
             &--icons{
                 display: flex;
 
                 &-apple{
-                    width: 15px;
-                    height: 15px;
-                    @include respond (small-phone) {
-                        width: 10px;
-                        height: 10px;
-                    }
-                    @include respond (very-small-phone) {
-                        width: 8px;
-                        height: 8px;
-                    }
+                    width: 1.6rem;
+                    height: 1.8rem;
+
                 }
                 &-android{
-                    width: 15px;
-                    height: 15px;
-                    @include respond (small-phone) {
-                        width: 10px;
-                        height: 10px;
-                    }
-                    @include respond (very-small-phone) {
-                        width: 8px;
-                        height: 8px;
-                    }
+                    width: 1.6rem;
+                    height: 1.8rem;
+
                 }
             }
         }

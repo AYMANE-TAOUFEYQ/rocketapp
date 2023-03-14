@@ -5,18 +5,25 @@
     color: #ffffff;
 
     &__body{
-        max-width: 70rem;
+        max-width: 86.9rem;
         margin: auto;
     }
 
     &__title{
         margin: 20px 0px;
-        text-transform: uppercase;
-        color: #ffffff;
+        height: 2.7rem;
         padding-left: 10px;
-        border-left: 3px solid #2F65FF;
+        text-transform: uppercase;
+        border-left: .6rem solid #2F65FF;
+        
+        
+        color: #ffffff;
         letter-spacing: 1px;
         word-spacing: 6px;
+        font-size: 2rem;
+
+        display: flex;
+        align-items: center;
     }
 
     &__items{
@@ -24,22 +31,25 @@
         justify-content: space-between;
         flex-wrap: nowrap;
         margin: 20px 0px;
+        gap: 4rem;
     }
     &__item{
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        
         align-items: center;
-        width: 12rem;
-        border-radius: 10px;
-        padding: 10px;
+        width: 14.2rem;
+        border-radius: 1.6rem;
+        padding: 1.5rem 0rem;
         transition: all .2s;
+        
         
         background-color: #222736;
         cursor: pointer;
-        @include respond (tablet) {
-            width: 15rem;
-        }
+
+
+
         &:hover{
             transform: scale(1.1);
         }
@@ -48,53 +58,38 @@
         }
 
         &--image{
-            width: 8rem;
-            height: 8rem;
-            border-radius: 10px;
-            margin-bottom: 1rem;
-            @include respond (tablet) {
-                width: 11rem;
-                height: 11rem;
-            }
+            width: 10rem;
+            height: 10rem;
+            border-radius: 1.6rem;
+            margin-bottom: 0.6rem;
+
+
         }
+
         h3{
             color: white;
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            @include respond (small-phone) {
-                font-size: 1rem;
-            }
-            @include respond (very-small-phone) {
-                font-size: .8rem;
-            }
-            @include respond (tablet) {
-                font-size: 1.6rem;
-            }
+            font-size: 1.6rem;
+            font-weight: 600;
+
+
         }
+
         &--rating{
-            font-size: 1.2rem;
+            font-size: 1.6rem;
             color: #707070;
-            font-weight: 400;
+            font-weight: 900;
             display: flex;
             align-items: center;
-            margin-bottom: 1rem;
+
             &--image{
                 width:1.6rem;
                 height: 1.6rem;
-                @include respond (tablet) {
-                    width: 2rem;
-                    height: 2rem;
-                }
+
+
             }
             span{
-                margin-left: .4rem;
-                font-weight: bold;
-                @include respond (tablet){
-                    margin-left: .8rem;
-                    font-size: 1.6rem;
-                } 
+                margin-left: .6rem;
             }
-
         }
     }
 }

@@ -13,7 +13,7 @@ const Item =  ({ post, changeContent }) => {
             />
 
             <div className='apps__main__item--details'>
-                <div className='apps__main__item--details--author'>Author: <span className='apps__main__item--details--author--blue'>{author}</span></div>
+                <div className='apps__main__item--details--author'>Author: <span className='apps__main__item--details--author--blue'> {author}</span></div>
                 <div className='apps__main__item--details--info'>
                     <div className='apps__main__item--details--info--title'>{title}</div>
                     <div className='featured__item--rating'>
@@ -25,15 +25,16 @@ const Item =  ({ post, changeContent }) => {
 
             <div className='apps__main__item--icons'>
                 <img
-                    src={apple}
-                    alt='item'
-                    className='apps__main__item--icons-apple'
-                />
-                <img
                     src={android}
                     alt='item'
                     className='apps__main__item--icons-android'
                 />
+                <img
+                    src={apple}
+                    alt='item'
+                    className='apps__main__item--icons-apple'
+                />
+
             </div>  
         </div>
     );
