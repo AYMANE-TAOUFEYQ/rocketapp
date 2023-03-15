@@ -7,6 +7,11 @@
     &__body{
         max-width: 86.9rem;
         margin: auto;
+
+        @include respond (tablet) {
+            max-width: none;
+            padding: 0rem 2rem;
+        }
     }
 
     &__title{
@@ -24,6 +29,11 @@
 
         display: flex;
         align-items: center;
+        text-align: center;
+
+        @include respond (phone){
+
+        }
     }
 
     &__items{
@@ -32,6 +42,12 @@
         flex-wrap: nowrap;
         margin: 20px 0px;
         gap: 4rem;
+        @include respond (tablet) {
+            gap: 2rem;
+        }
+        @include respond (phone) {
+            justify-content: space-evenly;
+        }
     }
     &__item{
         display: flex;

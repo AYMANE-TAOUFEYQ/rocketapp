@@ -7,6 +7,10 @@
     &__body{
         max-width: 90.9rem;
         margin: auto;
+        @include respond (tablet) {
+            max-width: none;
+            padding: 0rem 2rem;
+        }
     }
 
     &__header{
@@ -29,6 +33,9 @@
 
             display: flex;
             align-items: center;
+            @include respond (tablet-port) {
+                font-size: 1.8rem;
+            }
         }
     }
     &__main{
@@ -42,12 +49,19 @@
             display: none;
         }
 
+        @include respond (phone-big){
+            padding: 0rem;
+            border-radius: 0rem;
+        }
+
         &__items{
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
 
-
+            @include respond (tablet){
+                justify-content: center;
+            }
         }
         &__item{
             cursor: pointer;
@@ -61,6 +75,16 @@
             transition: all .2s;
             margin-bottom: 2rem;
 
+
+            @include respond (tablet){
+                width: 50.4rem;
+                padding: 1.5rem 4rem;
+            }
+
+            @include respond (tablet-port) {
+                padding: 1.5rem 2rem;
+            }
+
             &:hover{
                 transform: scale(1.02);
             }
@@ -73,12 +97,15 @@
                 height: 8.5rem;
                 border-radius: 1.6rem;
 
+
+
             }
 
             &--details{
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
+
                 &--author{
                     color: #8F98B5;
                     font-size: 1.4rem;
@@ -87,7 +114,9 @@
                     &--blue{
                         color: #2F65FF;
                     }
-
+                    @include respond (desktop){
+                        font-size: 1.2rem;
+                    }
 
                 }
 
@@ -103,7 +132,9 @@
                         border-right: 1px solid #1E2331;
                         padding-right: 1.3rem;
                         transition: all .2s;
-                        
+                        @include respond (desktop){
+                            font-size: 1.8rem;
+                        }
 
                     }
                 }  
@@ -112,7 +143,9 @@
                     color: #8F98B5;
                     font-size: 1.6rem;
                     font-weight: 100;
-
+                    @include respond (desktop){
+                        font-size: 1.4rem;
+                    }
                 }
             }
             &--icons{

@@ -6,33 +6,19 @@ html{
     @include respond (desktop) {
         font-size: 50%;
     }
-    @include respond (tablet) {
-        font-size: 40%;
-    }    
-    @include respond (tablet-port) {
-        font-size: 30%;
+    @include respond (phone-big) {
+        font-size: 38%;
     }
     @include respond (phone) {
-        font-size: 24%;
-    }
-    @include respond (phone-small) {
-        font-size: 18%;
-    }
-    @include respond (phone-small-very) {
-        font-size: 14%;
-    }
-    @include respond (phone-small-very-very) {
-        font-size: 10%;
+        font-size: 27%;
     }
 }
 body {
     font-family: 'Cairo', sans-serif !important;
-    font-family: 'Poppins', sans-serif;
 }
 
 code {
     font-family: 'Cairo', sans-serif !important;
-    font-family: 'Poppins', sans-serif;
 }
 
 a {

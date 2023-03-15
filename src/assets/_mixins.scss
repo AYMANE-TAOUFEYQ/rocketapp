@@ -3,21 +3,15 @@
         @media only screen and (max-width: 59.375em) { @content };    //950px
     }
     @if $breakpoint == tablet {
-        @media only screen and (max-width: 46.875em) { @content };     //550px
+        @media only screen and (max-width: 45em) { @content };     //720px
     }
     @if $breakpoint == tablet-port {
-        @media only screen and (max-width: 36.25em) { @content };     //450px
+        @media only screen and (max-width: 25em) { @content };     //500px
+    }
+    @if $breakpoint == phone-big {
+        @media only screen and (max-width: 23.75em) { @content };     //380px
     }
     @if $breakpoint == phone {
-        @media only screen and (max-width: 28.125em) { @content };     //450px
-    }
-    @if $breakpoint == phone-small {
-        @media only screen and (max-width: 21.875em) { @content };     //450px
-    }
-    @if $breakpoint == phone-small-very {
-        @media only screen and (max-width: 16.875em) { @content };     //450px
-    }
-    @if $breakpoint == phone-small-very-very {
-        @media only screen and (max-width: 12.5em) { @content };     //450px
+        @media only screen and (max-width: 16.875em) { @content };     //370px
     }
 }
